@@ -1,7 +1,7 @@
 ascii-set
 =========
 
-A mini-crate for representing sets of ASCII characters with fast membership testing. This crate was inspired by this [https://www.reddit.com/r/rust/comments/3l3bnn/eliminating_branches_in_rust_for_fun_but_not_much/](reddit discussion).
+A mini-crate for representing sets of ASCII characters with fast membership testing. This crate was inspired by this [reddit discussion](https://www.reddit.com/r/rust/comments/3l3bnn/eliminating_branches_in_rust_for_fun_but_not_much/).
 
 [![Build status](https://travis-ci.org/jneem/ascii-set.svg)](https://travis-ci.org/jneem/ascii-set)
 
