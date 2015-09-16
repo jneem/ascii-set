@@ -26,3 +26,5 @@ test lowercase_ascii_set    ... bench:       6,077 ns/iter (+/- 428) = 168 MB/s
 test lowercase_is_lowercase ... bench:       5,660 ns/iter (+/- 426) = 180 MB/s
 test lowercase_match        ... bench:       5,257 ns/iter (+/- 923) = 194 MB/s
 ```
+
+By the way, in case you're wondering why testing for "lowercase" is so much slower than the other two (even though it only needs to test a single range!), that's because it has a much larger branch prediction penalty. Since `rand::Rng::gen_ascii_chars` only generates alpha-numeric characters, the branch prediction works amazingly well for the "alnum" and "letter" tests.  But that should affect all three implementations equally.
